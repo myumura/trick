@@ -8,7 +8,7 @@ snow_chars = ["◯", "○", "●", "◎", "☃"]  # 積もった雪を表す文�
 
 loop do
   # 新しい雪を追加
-  f << {x: rand(w), y: 0, s: 0.1 + rand * 0.3, c: ["*", ".", "❄"].sample} if f.size < m && rand < 0.3
+  f << {x: rand(w), y: 0, s: 0.1 + rand * 0.3, c: ["*", ".", "❄"].sample} if f.size < m && rand < 0.7
   
   # 画面クリア
   print "\e[2J\e[H"
@@ -70,7 +70,7 @@ loop do
   puts s
   
   # 少し待つ
-  sleep 0.1
+  sleep 0.08
   
   # 終了条件（オプション：地面が高すぎる場合）
   break if ground.max > h / 2
